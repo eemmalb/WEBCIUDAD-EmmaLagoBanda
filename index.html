@@ -8,15 +8,56 @@
             <link href="styles.css" rel="stylesheet" type="text/css">
             <link href="media/img/flavicon.png" rel="icon" type="image/png">
             <!--ICONOS DE FONT AWESOME-->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+            <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
             
             <!-- CARGAMOS ARCHIVO EXTERNO DE JS -->
             <script src="js/script.js"></script>
-            <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
     
             <meta name="viewport" content="width=device-width, initial-scale=1">
         </head>
         <body>
             
+            <header>
+                <nav id="menu">
+                    <h1>
+                        <a href="#"><span class="logo"><img src="media/img/ReykjavikLogo.webp" alt=""></span></a>
+                    </h1>
+                    <div class="opciones-menu">
+                        <!-- se le añade el atributo onclick al icono de hamburguesa para que cuando el ususario le, se abra el menu -->
+                        <!-- se le pone la funcion openMenu ya que es eso lo que va a hacer. intentar ponerlo lo más descriptivo posible. la funcion openmenu se define en el js -->
+                        <i class="fas fa-bars" onclick="openMenu()"></i>
+                        <ul>
+                            <li>
+                                <a href="#quienessomos" onclick="closeMenu()">explorar</a>
+                            </li>
+                            <li>
+                                <a href="#disenios" onclick="closeMenu()">turismo</a>
+                            </li>
+                            <li>
+                                <a href="#contacto" onclick="closeMenu()">localizaciones</a>
+                            </li>
+                            <li>
+                                <a href="#contacto" onclick="closeMenu()">contacto</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <button> 
+                        <p>más información</p> 
+                        
+                    </button>
+                </nav>
+
+                <div class="back-img"></div>
+                <div class="back-img-blur"></div>
+              
+                <div class="back-img-text">
+                  <h1 class="hero-title" data-text="REYKJAVIK">REYKJAVIK</h1>
+                  <h2>islandia</h2>
+                  <!-- <i class="fa-solid fa-arrow-down"></i> -->
+            </header>
+            </div>
         </body>
     </html>

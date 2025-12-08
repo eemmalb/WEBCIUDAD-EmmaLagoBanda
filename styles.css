@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* importar mis propias fuentes */
+@font-face {
+    font-family: "SK-Reykjavik";
+    src: url("./media/fonts/Sk_reykjavik-Regular.woff2") format("woff2"),
+         url("./media/fonts/Sk_reykjavik-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* VARIABLES */
+:root {
+    --color-primario: #fcca00;
+    --color-secundario: #ffffff;
+    --color-terciario: #000000;
+    --hero-bg: url(./media/img/IntroImage.webp);
+    --margenes-texto: 1rem 0;
+    --borde: var(--color-primario) 0.5px solid;
+    --interlineado: 1.5em;
+    --distancia-iconos: 1rem;
+    --tamano-texto-menu: 2rem;
+    --font-primary: "SK-Reykjavik", sans-serif;
+
+}
+
+/* reseteamos los estilos del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    cursor: url('#'), default;
+    font-family: "Mulish", sans-serif;
+    color: var(--color-primario);
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/* con este selector y propiedades conseguimos que las imagenes se adapten al tamaño del elemento que las contiene y sean responsive */
+img,
+video {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    z-index: 5;
+    margin-top: 10px;
+}
+
+#menu > .opciones-menu > i,
+#menu > .opciones-menu > ul > li:last-child {
+    display: none;
+}
+
+#menu > .opciones-menu > ul {
+    width: 30em;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu > .opciones-menu > ul > li {
+    list-style: none;
+}
+
+#menu > h1 > a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+#menu .logo img {
+    height: 1em;
+    width: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #fcca00;
+    border-radius: 50px;
+    border-style: none;
+}
+
+button p {
+    margin: 0;
+    color: var(--color-terciario);
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 100vh; 
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* capa de fondo desenfocada */
+.back-img-blur {
+    position: absolute;
+    inset: -10px; /* inset es como top, bottom y left a la vez, para que el blur no muestre bordes */
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(4px);
+    z-index: 1;
+}
+
+/* contenedor del texto con la imagen nítida */
+.back-img-text {
+    position: relative; /* para que deje poner z-index */
+    z-index: 2; /* para que quede por encima del fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.back-img-text h1 {
+    font-size: clamp(5rem, 12vw, 12rem);
+    margin: 0;
+    background-image: url(./media/img/IntroImage.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* para que coincida con el fondo */
+    color: transparent;
+    background-clip: text;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--color-primario);
+    font-family: var(--font-primary);
+}
+
+.back-img-text h2 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-family: var(--font-primary);
+}
+
+
+
+
+@media screen and (max-width: 930px) {
+    header button {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+
+    #menu > .opciones-menu > i {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu > .opciones-menu > ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        left: auto;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+        padding: 30% 0;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: right 1s ease;
+    }
+
+    #menu > .opciones-menu > ul > li > a {
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+    #menu > .opciones-menu > ul > li:last-child {
+        display: block;
+        position: absolute;
+        right: 2em;
+        top: 2em;
+    }
+
+    #menu > .opciones-menu > ul > li:last-child > i {
+        /* font-size: 2em; */
+        margin-top: 0;
+    }
+}
