@@ -65,7 +65,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2em;
+    padding: 0 1em;
     z-index: 5;
     margin-top: 10px;
 }
@@ -154,18 +154,17 @@ header {
 }
 
 .back-img-text h1 {
-    font-size: clamp(4rem, 11vw, 11rem);
+    font-size: clamp(5rem, 12vw, 12rem);
     margin: 0;
-    /* background-image: url(./media/img/IntroImage.webp);
+    background-image: url(./media/img/IntroImage.webp);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* para que coincida con el fondo */
     color: transparent;
     background-clip: text;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--color-primario); */
+    -webkit-text-stroke-color: var(--color-primario);
     font-family: var(--font-primary);
-    color: var(--color-secundario);
 }
 
 .titulo-movil {
