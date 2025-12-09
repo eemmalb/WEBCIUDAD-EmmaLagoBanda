@@ -18,6 +18,7 @@
     --hero-bg: url(./media/img/IntroImage.webp);
     --margenes-texto: 1rem 0;
     --borde: var(--color-primario) 0.5px solid;
+    --border-radius: 999px;
     --interlineado: 1.5em;
     --distancia-iconos: 1rem;
     --tamano-texto-menu: 2rem;
@@ -64,7 +65,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 2em;
     z-index: 5;
     margin-top: 10px;
 }
@@ -101,7 +102,7 @@ video {
 button {
     padding: 10px 30px;
     background-color: #fcca00;
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     border-style: none;
 }
 
@@ -115,8 +116,8 @@ button p {
 header {
     width: 100%;
     height: 100vh;
-    position: sticky;
-    top: 100vh; 
+    position: relative;
+    top: 0;
     z-index: 1;
     overflow: hidden;
     display: flex;
@@ -153,17 +154,18 @@ header {
 }
 
 .back-img-text h1 {
-    font-size: clamp(5rem, 12vw, 12rem);
+    font-size: clamp(4rem, 11vw, 11rem);
     margin: 0;
-    background-image: url(./media/img/IntroImage.webp);
+    /* background-image: url(./media/img/IntroImage.webp);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* para que coincida con el fondo */
+    background-attachment: fixed;
     color: transparent;
     background-clip: text;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--color-primario);
+    -webkit-text-stroke-color: var(--color-primario); */
     font-family: var(--font-primary);
+    color: var(--color-secundario);
 }
 
 .titulo-movil {
@@ -191,17 +193,23 @@ header {
     background: rgba(0, 0, 0, 0.406);
     color: var(--color-secundario);
     padding: 0.45rem 0.75rem;
-    border-radius: 999px;
+    border-radius: var(--border-radius);
     box-shadow: 0 8px 24px rgba(118, 118, 118, 0.15);
-    font-family: "Mulish", sans-serif;
     font-size: 0.9rem;
-    line-height: 1.2;
     order: -1;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .AsistenteVirtual img {
     width: 50px;
     height: auto;
+}
+
+.AsistenteVirtual:hover::before {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 
@@ -257,15 +265,66 @@ header {
 
 
 @media screen and (max-width: 585px) {
-    .titulo-movil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* ocultamos solo el primer h1 directo (el largo) y mostramos la versión partida */
+    .back-img-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo-movil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        align-self: center;
+    }
+
+    .titulo-movil h1 {
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+        background-position: center;
+    }
+
+    /* oculto solo el primer h1 (el largo) y muestro la versión partida */
     .back-img-text > h1:first-child {
         display: none;
     }
+}
+
+
+
+/* SECTION INTRO  */
+.intro-ciudad {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.intro-ciudad .intro-wrapper {
+    max-width: 800px;
+    display: grid;
+    gap: 1rem;
+}
+
+.intro-ciudad h3 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.intro-ciudad p {
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--color-terciario);
 }
