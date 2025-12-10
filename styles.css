@@ -64,6 +64,7 @@
     cursor: url('#'), default;
     font-family: "Mulish", sans-serif;
     color: var(--color-primario);
+    scroll-behavior:smooth;
 }
 
 a {
@@ -162,12 +163,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.img-fondo {
-    position: fixed;
-    height: 100vh;
-    z-index: 1;
 }
 
 /* capa de fondo desenfocada */
@@ -343,22 +338,38 @@ header {
 
 
 .img-noblur {
-     position: relative;
+    position: relative;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    --overlay-opacity: 0;
+}
+
+.img-noblur::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-cuaternario);
+    opacity: var(--overlay-opacity);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
 
 /* SECTION INTRO  */
 .intro-ciudad {
-    position: relative;
-    min-height: 60vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: calc(100vh + 2rem) 2rem 4rem;
-    margin-top: -100vh; /* superpone el texto sobre el hero al hacer scroll */
     text-align: center;
-    background-color: var(--color-cuaternario);
+    background: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .intro-ciudad .intro-wrapper {
