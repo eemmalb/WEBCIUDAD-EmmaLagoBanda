@@ -18,11 +18,6 @@
         <body>
             
             <header>
-                
-                <figure class="img-fondo">
-                    <img src="media/img/FondoIntro.webp" alt="">
-                </figure>
-            
                 <nav id="menu">
                     <h1>
                         <a href="#"><span class="logo"><img src="media/img/ReykjavikLogo.webp" alt=""></span></a>
@@ -54,20 +49,19 @@
                     </button>
                 </nav>
 
-                <div class="back-img"></div>
-                <div class="back-img-blur"></div>
+                <div class="back-img-blur"></div> <!-- imagen con blur -->
               
-                <div class="back-img-text">
-                  <h1 class="hero-title" data-text="REYKJAVIK">REYKJAVIK</h1>
-
-                  <div class="titulo-movil">
-                    <h1 class="hero-title" data-text="REYKJAVIK">REYK</h1>
-                    <h1 class="hero-title" data-text="REYKJAVIK">JAVIK</h1>
-                  </div>
-                  
-                  <h2>islandia</h2>
-                  <!-- <i class="fa-solid fa-arrow-down"></i> -->
+                <div class="back-img-text"> <!-- titulos iintro -->
+                    <h1 class="hero-title" data-text="REYKJAVIK">REYKJAVIK</h1>
+  
+                    <div class="titulo-movil">
+                      <h1 class="hero-title">REYK</h1>
+                      <h1 class="hero-title">JAVIK</h1>
+                    </div>
+                    
+                    <h2>islandia</h2>
                 </div>
+                
                 
                 <div class="AsistenteVirtual">
                   <figure>
@@ -77,15 +71,18 @@
                 </div>
             </header>
 
-            <section class="img-noblur"></section>
-            <section class="intro-ciudad">
-                <div class="intro-wrapper">
-                    <h3>Bienvenido a Reikiavik</h3>
+            <section class="img-noblur">
+                <div class="overlay-text">
+                    <div class="welcome-title">
+                        <h3>Bienvenido a</h3>
+                        <h3>Reikiavik</h3>
+                    </div>
                     <p>
-                        Reikiavik, además de la capital de Islandia, es la ciudad más poblada del país y la que cuenta con una mayor oferta cultural y de ocio.  
+                        Reikiavik, además de ser la capital de Islandia, es la ciudad más poblada del país y la que cuenta con una mayor oferta cultural y de ocio.
                     </p>
                     <p><strong>Descubre qué ver en Reikiavik y qué hacer en sus alrededores.</strong></p>
                 </div>
+                <div class="img-overlay"></div> <!-- silueta islandia con css para poder ponerla con el blur -->
             </section>
         </body>
     </html>
