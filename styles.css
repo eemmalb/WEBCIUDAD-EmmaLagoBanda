@@ -1,31 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* importar mis propias fuentes */
-@font-face {
+/* @font-face {
     font-family: "SK-Reykjavik";
     src: url("./media/fonts/Sk_reykjavik-Regular.woff2") format("woff2"),
          url("./media/fonts/Sk_reykjavik-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+} */
+
+/* @font-face {
+    font-family: "Norse";
+    src: url("./media/fonts/Norse.woff2") format("woff2"),
+         url("./media/fonts/Norse.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: "Norse-bold";
+    src: url("./media/fonts/Norse-Bold.woff2") format("woff2"),
+         url("./media/fonts/Norse-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: "Nordic Alternative";
+    src: url("./media/fonts/Nordic\ Alternative\ Regular.woff2") format("woff2"),
+         url("./media/fonts/Nordic\ Alternative\ Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* VARIABLES */
 :root {
-    --color-primario: #fcca00;
+    --color-primario: #ffffff;
     --color-secundario: #ffffff;
     --color-terciario: #000000;
     --color-cuaternario: #2f3a44;
     /* --hero-bg: url(./media/img/IntroImage.webp); */
-    --hero-bg: url(./media/img/Pruebafondo3.png);
+    --hero-bg: url(./media/img/FondoIntro.webp);
     --margenes-texto: 1rem 0;
     --borde: var(--color-primario) 0.5px solid;
     --border-radius: 999px;
     --interlineado: 1.5em;
     --distancia-iconos: 1rem;
     --tamano-texto-menu: 2rem;
-    --font-primary: "SK-Reykjavik", sans-serif;
-
+    /* --font-primary: "SK-Reykjavik", sans-serif; */
+    --font-primary: "Nordic Alternative", sans-serif;
 }
 
 /* reseteamos los estilos del navegador */
@@ -107,7 +135,7 @@ video {
 
 button {
     padding: 10px 30px;
-    background-color: var(--color-primario);
+    background-color: var(--color-secundario);
     border-radius: var(--border-radius);
     border-style: none;
 }
@@ -166,18 +194,19 @@ header {
 }
 
 .back-img-text h1 {
-    font-size: clamp(5rem, 12vw, 12rem);
+    font-size: clamp(4rem, 7vw, 11rem);
     margin: 0;
-    background-image: var(--hero-bg);
+    /* background-image: var(--hero-bg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: transparent;
     background-clip: text;
     -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: var(--color-primario);
+    -webkit-text-stroke-color: var(--color-primario); */
     font-family: var(--font-primary);
-    text-shadow: 2px 2px var(--color-terciario);
+    /* text-shadow: 2px 2px var(--color-terciario); */
+    color: var(--color-secundario);
 }
 
 .titulo-movil {
@@ -185,7 +214,7 @@ header {
 }
 
 .back-img-text h2 {
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(0.5rem, 2vw, 2rem);
     font-family: var(--font-primary);
 }
 
