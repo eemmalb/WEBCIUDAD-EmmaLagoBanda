@@ -12,10 +12,13 @@
 
 /* VARIABLES */
 :root {
-    --color-primario: #fcca00;
+    /* --color-primario: #fcca00; */
+    --color-primario: #beebff;
     --color-secundario: #ffffff;
     --color-terciario: #000000;
-    --hero-bg: url(./media/img/IntroImage.webp);
+    --color-cuaternario: #2f3a44;
+    /* --hero-bg: url(./media/img/IntroImage.webp); */
+    --hero-bg: url(./media/img/Fondobarcovikingo.webp);
     --margenes-texto: 1rem 0;
     --borde: var(--color-primario) 0.5px solid;
     --border-radius: 999px;
@@ -46,6 +49,10 @@ a {
     padding: 0 40px;
 }
 
+strong {
+    font-weight: bold;
+    color: var(--color-secundario);
+}
 
 /* con este selector y propiedades conseguimos que las imagenes se adapten al tamaño del elemento que las contiene y sean responsive */
 img,
@@ -101,7 +108,7 @@ video {
 
 button {
     padding: 10px 30px;
-    background-color: #fcca00;
+    background-color: var(--color-primario);
     border-radius: var(--border-radius);
     border-style: none;
 }
@@ -156,10 +163,10 @@ header {
 .back-img-text h1 {
     font-size: clamp(5rem, 12vw, 12rem);
     margin: 0;
-    background-image: url(./media/img/IntroImage.webp);
+    background-image: var(--hero-bg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* para que coincida con el fondo */
+    background-attachment: fixed;
     color: transparent;
     background-clip: text;
     -webkit-text-stroke-width: 0.5px;
@@ -303,13 +310,15 @@ header {
 
 /* SECTION INTRO  */
 .intro-ciudad {
+    position: relative;
     min-height: 60vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 2rem;
-    background-color: #f7f7f7;
+    padding: calc(100vh + 2rem) 2rem 4rem;
+    margin-top: -100vh; /* superpone el texto sobre el hero al hacer scroll */
     text-align: center;
+    background-color: var(--color-cuaternario);
 }
 
 .intro-ciudad .intro-wrapper {
@@ -320,10 +329,10 @@ header {
 
 .intro-ciudad h3 {
     font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--color-secundario);
 }
 
 .intro-ciudad p {
     font-size: clamp(1rem, 2.4vw, 1.25rem);
-    line-height: 1.6;
-    color: var(--color-terciario);
+    color: var(--color-secundario);
 }
