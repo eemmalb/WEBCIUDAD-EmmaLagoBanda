@@ -445,7 +445,7 @@ header {
 
 /* SECCIÓN EXPLORAR */
 .explorar {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-terciario);
     padding: 4rem;
     display: flex;
