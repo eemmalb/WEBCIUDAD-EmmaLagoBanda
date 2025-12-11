@@ -6,11 +6,12 @@
             
             <!-- CARGAMOS ARCHIVO EXTERNO DE CSS -->
             <link href="styles.css" rel="stylesheet" type="text/css">
-            <link href="media/img/flavicon.png" rel="icon" type="image/png">
+            <link href="media/img/favicon-16x16.png" rel="icon" type="image/png">
             <!--ICONOS DE FONT AWESOME-->
             <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
             
             <!-- CARGAMOS ARCHIVO EXTERNO DE JS -->
+            <script src="js/jquery-3.7.1.min.js"></script>
             <script src="js/script.js"></script>
     
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,13 +29,13 @@
                         <i class="fas fa-bars" onclick="openMenu()"></i>
                         <ul>
                             <li>
-                                <a href="#quienessomos" onclick="closeMenu()">explorar</a>
+                                <a href="#explorar" onclick="closeMenu()">explorar</a>
                             </li>
                             <li>
-                                <a href="#disenios" onclick="closeMenu()">turismo</a>
+                                <a href="#turismo" onclick="closeMenu()">turismo</a>
                             </li>
                             <li>
-                                <a href="#contacto" onclick="closeMenu()">localizaciones</a>
+                                <a href="#localizaciones" onclick="closeMenu()">localizaciones</a>
                             </li>
                             <li>
                                 <a href="#contacto" onclick="closeMenu()">contacto</a>
@@ -45,7 +46,7 @@
                         </ul>
                     </div>
                     <button> 
-                        <p>más información</p> 
+                        <a href="#info" onclick="closeMenu()">Planifica tu viaje</a> 
                     </button>
                 </nav>
 
@@ -86,7 +87,7 @@
             </section>
 
             <!-- separador entre la intro y el resto del contenido -->
-            <section class="explorar">
+            <section id="explorar" class="explorar">
                 <div class="exp-title">
                     <p class="title-montserrat">Experiencias únicas</p>
                     <p>Explora y descubre los lugares más emblemáticos de Reykjavík y sus alrededores</p>
@@ -120,11 +121,149 @@
                     <figure class="explore-card">
                         <img src="media/img/CascadasImpresionantesExplorar.webp" alt="">
                         <figcaption class="card-content">
-                            <h3>Cascadas Impresionantes</h3>
-                            <p>Déjate sorprender por caídas de agua monumentales entre acantilados y campos de lava.</p>
+                            <h3>Cascadas Monumentales</h3>
+                            <p>Déjate sorprender por caídas de agua entre acantilados y campos de lava.</p>
                         </figcaption>
                     </figure>
                 </div>
+            </section>
+
+            <div class="marquee">
+                <div class="group rtl">
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo1.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo2.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo3.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo4.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo5.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo6.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo7.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo8.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo9.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo10.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo11.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo12.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo13.webp" alt="">
+                    </figure>
+
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo1.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo2.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo3.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo4.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo5.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo6.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo7.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo8.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo9.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo10.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo11.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo12.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo13.webp" alt="">
+                    </figure>
+
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo1.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo2.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo3.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo4.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo5.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo6.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo7.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo8.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo9.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo10.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo11.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo12.webp" alt="">
+                    </figure>
+                    <figure class="marquee-item">
+                        <img src="media/img/SimboloVikingo13.webp" alt="">
+                    </figure>
+                </div>
+            </div>
+            
+
+            <section id="turismo" class="turismo">
+                <div class="exp-title">
+                    <p class="title-montserrat">Cultura nórdica y herencia vikinga</p>
+                    <p>Reykjavík conserva sus raíces vikingas en cada rincón. Desde las sagas islandesas hasta la arquitectura contemporánea que honra el pasado, la ciudad es un testimonio vivo de mil años de historia nórdica.</p>
+                </div>
+                <figure>
+                    <img src="" alt="">
+                    <figure></figure>
+                </figure>
+
+                <div></div>
             </section>
 
         </body>
