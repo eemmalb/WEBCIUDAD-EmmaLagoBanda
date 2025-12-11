@@ -441,7 +441,6 @@ header {
         width: min(90vw, calc(50vh * var(--shape-ratio)));
         max-height: 50vh;
         height: auto;
-        flex-shrink: 0;
     }
 
     .overlay-text {
@@ -453,4 +452,122 @@ header {
 }
 
 
-/* SECTION INTRO  */
+/* SECCIÓN EXPLORAR */
+.explorar {
+    height: 100vh;
+    background-color: var(--color-terciario);
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.explore-card {
+    position: relative;
+    flex: 1 1 23%;
+    min-width: 260px;
+    max-width: 320px;
+    height: 420px;
+    overflow: hidden;
+}
+
+.explore-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+
+/* blur para que se lea mejor el texto  */
+.explore-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 30%;
+    background: rgba(18, 17, 27, 0.35);
+    /* backdrop-filter en vez de filter solo porq quiero que se note el corte y backdrop-filter hace que se le ponga el blur como por detras del elemento, no al elemento directamente */
+    backdrop-filter: var(--blur);
+    z-index: 2;
+}
+
+
+.explore-card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+    z-index: 3;
+}
+
+.explore-card h3 {
+    font-size: 1rem;
+}
+
+.explore-card p {
+    font-size: 1rem;
+    color: var(--color-primario);
+}
+
+
+@media screen and (max-width: 900px) {
+    .explorar {
+        padding: 3rem 2rem;
+    }
+    .explore-grid {
+        gap: 2rem;
+    }
+    .explore-card {
+        flex: 1 0 48%;
+        min-width: 240px;
+        max-width: 320px;
+        height: 380px;
+    }
+    .explore-card .card-content {
+        padding: 1.25rem;
+        gap: 0.65rem;
+    }
+    .explore-card h3 {
+        font-size: 1.4rem;
+    }
+    .explore-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .explorar {
+        padding: 2.5rem 1.25rem;
+    }
+    .explore-grid {
+        gap: 1.5rem;
+    }
+    .explore-card {
+        flex: 1 0 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: 340px;
+    }
+    .explore-card h3 {
+        font-size: 1.35rem;
+    }
+}
