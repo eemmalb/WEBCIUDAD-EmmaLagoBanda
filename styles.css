@@ -1,32 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* importar mis propias fuentes */
-/* @font-face {
-    font-family: "SK-Reykjavik";
-    src: url("./media/fonts/Sk_reykjavik-Regular.woff2") format("woff2"),
-         url("./media/fonts/Sk_reykjavik-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
-
-/* @font-face {
-    font-family: "Norse";
-    src: url("./media/fonts/Norse.woff2") format("woff2"),
-         url("./media/fonts/Norse.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Norse-bold";
-    src: url("./media/fonts/Norse-Bold.woff2") format("woff2"),
-         url("./media/fonts/Norse-Bold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @font-face {
     font-family: "Nordic Alternative";
@@ -56,6 +30,9 @@
     --blur: blur(5px);
     --shape-ratio: 1.192; /* proporcion ancho/alto de la silueta de islandia*/
     --font-size: clamp(1rem, 2.1vw, 1.1rem);
+    --montserrat-title: "Montserrat", sans-serif;
+    --montserrat-tracking: 0.3em;
+    --montserrat-transform: uppercase;
 }
 
 /* reseteamos los estilos del navegador */
@@ -90,6 +67,16 @@ video {
     width: 100%;
     height: auto;
     vertical-align: middle;
+}
+
+
+.title-montserrat {
+  font-family: var(--montserrat-title);
+  letter-spacing: var(--montserrat-tracking);
+  text-transform: var(--montserrat-transform);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
 }
 
 
@@ -146,6 +133,10 @@ button {
 button p {
     margin: 0;
     color: var(--color-secundario);
+    font-family: var(--montserrat-title);
+    letter-spacing: var(--montserrat-tracking);
+    text-transform: var(--montserrat-transform);
+    font-size: 0.5rem;
 }
 
 /* HEADER */
@@ -241,7 +232,7 @@ header {
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    z-index: 4;
+    z-index: 10;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -409,11 +400,11 @@ header {
 }
 
 
-.overlay-text .welcome-title h3:first-child {
+.welcome-title h3:first-child {
     font-size: clamp(1rem, 3vw, 1rem);
 }
 
-.overlay-text .welcome-title h3:last-child {
+.welcome-title h3:last-child {
     font-size: clamp(3rem, 5vw, 3rem);
     font-family: var(--font-primary);
 }
@@ -458,6 +449,15 @@ header {
     background-color: var(--color-terciario);
     padding: 4rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exp-title {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -519,13 +519,9 @@ header {
     z-index: 3;
 }
 
-.explore-card h3 {
-    font-size: 1rem;
-}
-
+.explore-card h3,
 .explore-card p {
-    font-size: 1rem;
-    color: var(--color-primario);
+    font-size: 0.8rem;
 }
 
 
@@ -546,12 +542,6 @@ header {
         padding: 1.25rem;
         gap: 0.65rem;
     }
-    .explore-card h3 {
-        font-size: 1.4rem;
-    }
-    .explore-card p {
-        font-size: 0.95rem;
-    }
 }
 
 @media screen and (max-width: 640px) {
@@ -566,8 +556,5 @@ header {
         min-width: 0;
         max-width: 100%;
         height: 340px;
-    }
-    .explore-card h3 {
-        font-size: 1.35rem;
     }
 }
