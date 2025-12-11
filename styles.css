@@ -612,3 +612,89 @@ header {
         transform: translateX(-50%);
     }
 }
+
+
+/* SECCION TURISMO */
+.turismo {
+    background: var(--color-terciario);
+    display: flex;
+    flex-direction: row;
+    padding-top: 5rem;
+}
+
+.turismo-container {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.turismo-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 10rem;
+    gap: 1rem;
+    font-size: var(--font-size);
+}
+
+
+/* para editar el tamaño de todo el texto menos el que tiene la clase de title montserrat, porque ese quiero que siga igual en toda la web */
+.turismo-text p:not(.title-montserrat) {
+    font-size: var(--font-size);
+}
+
+.turismo-img {
+    flex: 1 1 50%;
+    max-width: 50%;
+    width: 100%;
+    max-height: 70vh;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+}
+
+.turismo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* recorte pegado arriba */
+    display: flex;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1100px) {
+    .turismo-text {
+    padding: 5rem;
+    justify-content: center;
+}
+}
+
+@media screen and (max-width: 900px) {
+    .turismo-container {
+        flex-direction: column;
+        min-height: auto;
+        gap: 1.5rem;
+    }
+
+    .turismo-text,
+    .turismo-img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .turismo-img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .turismo {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .turismo-img img {
+    object-position: center;
+}
+}
