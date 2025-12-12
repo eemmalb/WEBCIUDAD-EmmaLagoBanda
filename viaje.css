@@ -1,0 +1,118 @@
+/* Estilos para viaje.html */
+
+body.viaje-page {
+    min-height: 100vh;
+    background-color: var(--color-terciario);
+}
+
+#viaje-root {
+    width: 100%;
+}
+
+/* no estaba desapareciendo el button cuando aparecía el menú de hamburguesa */
+@media screen and (max-width: 930px) {
+    #menu button {
+        display: none;
+    }
+}
+
+/* Hero viaje */
+.viaje-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(3rem, 6vw, 6rem) 1.5rem;
+    overflow: hidden;
+    background: url("media/img/Reikiavik-Rainbow.webp") center/cover fixed no-repeat;
+}
+
+.viaje-hero_bg {
+    position: absolute;
+    inset: 0;
+    background: url("media/img/Reikiavik-Rainbow.webp") center/cover fixed no-repeat;
+    filter: var(--blur);
+    min-height: 100vh;
+}
+
+.viaje-hero_content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    color: var(--color-primario);
+    max-width: min(760px, 90vw);
+}
+
+.viaje-hero_title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin: 0;
+    letter-spacing: 0.08em;
+    font-family: var(--font-primary);
+}
+
+.viaje-hero_desc {
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1rem;
+    max-width: 640px;
+}
+
+/* Sección mapa */
+.viaje-map {
+    position: relative;
+    min-height: 100vh;
+    /* background: url("media/img/Reikiavik-Rainbow.webp") center/cover fixed no-repeat; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.viaje-map_bg {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: 0;
+}
+
+.viaje-map_overlay {
+    position: relative;
+    z-index: 1;
+    width: min(960px, 90vw);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viaje-map_placeholder {
+    width: 100%;
+    min-height: 60vh;
+    backdrop-filter: var(--blur);
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--color-primario);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.viaje-map_placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+}
+
+.viaje-map_placeholder h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.viaje-map_placeholder p {
+    margin: 0;
+    line-height: 1.5;
+}
