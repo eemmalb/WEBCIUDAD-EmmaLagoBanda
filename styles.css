@@ -117,10 +117,10 @@ video {
     list-style: none;
 }
 
-#menu.menu-solid,
-.menuViaje {
+#menu.menu-solid {
     background-color: var(--color-terciario);
 }
+
 
 #menu > .opciones-menu > ul > li > a:hover {
     text-decoration: underline;
@@ -158,6 +158,10 @@ button a {
 
 button:hover {
     background-color: var(--color-resaltados);
+}
+
+#menu .opciones-menu ul .buttonViajeMenuMovil {
+    display: none;
 }
 
 /* HEADER */
@@ -332,6 +336,10 @@ header {
         /* font-size: 2em; */
         margin-top: 0;
     }
+
+    #menu .opciones-menu ul .buttonViajeMenuMovil {
+    display: block;
+}
 }
 
 
@@ -914,7 +922,7 @@ header {
 
 .stat-value {
     font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 600;
+    font-family: var(--font-primary);
 }
 
 .stat-label {
@@ -1107,6 +1115,16 @@ header {
         grid-template-columns: 1fr;
     }
 
+    /* fuerza siempre texto arriba, imagen abajo */
+    .parada-texto {
+        order: 1;
+    }
+
+    .parada-img {
+        order: 2;
+    }
+
+    /* evita cualquier alternancia en mobile */
     .recorridoParadas .parada:nth-of-type(even) .parada-img,
     .recorridoParadas .parada:nth-of-type(even) .parada-texto {
         order: unset;

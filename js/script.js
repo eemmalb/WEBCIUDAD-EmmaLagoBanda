@@ -69,42 +69,26 @@ $(function () {
     var autoSlide = setInterval(updateIndex, 3000); // temporizador que llama a updateIndex cada 3 segundos para avanzar automáticamente por las slides si no hay clic
 });
 
+
+
 // cambia la opacidad/fondo del menú en función del scroll
 function changeOpacity() {
     var menu = document.getElementById("menu");
-
-    // En viaje.html no aplicamos fondo, lo dejamos transparente siempre
-    if (document.body.classList.contains("viajehtml")) {
-        if (menu) {
-            menu.classList.remove("menu-solid");
-            menu.style.backgroundColor = "transparent";
-        }
-        return;
-    }
-
-    // umbral: primera sección de contenido tras el hero.
-    var triggerSection =
-        document.querySelector(".explorar") ||
-        document.querySelector(".recorridoParadas") ||
-        document.querySelector(".introOrganizaViaje");
+    var explorar = document.querySelector(".explorar");
 
     var scroll = window.scrollY; // posición actual de scroll
 
-    // si la parte superior de la sección ya tocó el viewport, fondo sólido
-    if (triggerSection) {
-        var triggerTop = triggerSection.getBoundingClientRect().top + window.scrollY;
-        if (scroll >= triggerTop) {
-            menu.classList.add("menu-solid");
-            menu.style.backgroundColor = "";
-            return;
-        }
+    // si la parte superior de .explorar ya tocó el viewport, fondo sólido
+    var explorarTop = explorar.getBoundingClientRect().top + window.scrollY;
+    if (scroll >= explorarTop) {
+        menu.classList.add("menu-solid");
+        menu.style.backgroundColor = "";
+        return;
     }
 
-    // antes del umbral el menú es transparente
-    if (menu) {
-        menu.classList.remove("menu-solid");
-        menu.style.backgroundColor = "transparent";
-    }
+    // antes de explorar el menú es transparente
+    menu.classList.remove("menu-solid");
+    menu.style.backgroundColor = "transparent";
 }
 
 window.addEventListener("scroll", changeOpacity);

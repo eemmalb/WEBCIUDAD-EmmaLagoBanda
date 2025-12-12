@@ -23,32 +23,42 @@
 
         <body class="viajehtml">
             <section class="introOrganizaViaje">
-                <nav id="menu" class="menuViaje">
+                <nav id="menu">
                     <h1>
-                        <a href="#"><span class="logo"><img src="media/img/ReykjavikLogo.webp" alt=""></span></a>
+                        <a href="index.html"><span class="logo"><img src="media/img/ReykjavikLogo.webp" alt=""></span></a>
                     </h1>
                     <div class="opciones-menu">
-
+                        <!-- se le añade el atributo onclick al icono de hamburguesa para que cuando el ususario le, se abra el menu -->
+                        <!-- se le pone la funcion openMenu ya que es eso lo que va a hacer. intentar ponerlo lo más descriptivo posible. la funcion openmenu se define en el js -->
                         <i class="fas fa-bars" onclick="openMenu()"></i>
                         <ul>
                             <li>
-                                <a href="index.html" onclick="closeMenu()">explorar</a>
+                                <a href="#explorar" onclick="closeMenu()">explorar</a>
                             </li>
                             <li>
-                                <a href="index.html" onclick="closeMenu()">turismo</a>
+                                <a href="#turismo" onclick="closeMenu()">turismo</a>
                             </li>
                             <li>
-                                <a href="index.html"  onclick="closeMenu()">información</a>
+                                <a href="#temporadas" onclick="closeMenu()">información</a>
                             </li>
+
+
+                            <li class="buttonViajeMenuMovil">
+                                <a href="viaje.html" onclick="closeMenu()">Planifica tu viaje</a>
+                            </li>
+
+
                             <li>
                                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                             </li>
+                            
                         </ul>
                     </div>
                     <button> 
                         <a href="viaje.html" onclick="closeMenu()">Planifica tu viaje</a> 
                     </button>
                 </nav>
+
                 
                 <div class="AsistenteVirtual">
                   <figure>
