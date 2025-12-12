@@ -68,3 +68,26 @@ $(function () {
     $bullet.on("click", clickSlide); // es como que engancha la funcion clicksSlide al evento click de cada bullet, entonces al pulsar uno, se detiene el autoplay y se salta a esa slide
     var autoSlide = setInterval(updateIndex, 3000); // temporizador que llama a updateIndex cada 3 segundos para avanzar automáticamente por las slides si no hay clic
 });
+
+// cambia la opacidad/fondo del menú en función del scroll
+function changeOpacity() {
+    var menu = document.getElementById("menu");
+    var explorar = document.querySelector(".explorar");
+
+    var scroll = window.scrollY; // posición actual de scroll
+
+    // si la parte superior de .explorar ya tocó el viewport, fondo sólido
+    var explorarTop = explorar.getBoundingClientRect().top + window.scrollY;
+    if (scroll >= explorarTop) {
+        menu.classList.add("menu-solid");
+        menu.style.backgroundColor = "";
+        return;
+    }
+
+    // antes de explorar el menú es transparente
+    menu.classList.remove("menu-solid");
+    menu.style.backgroundColor = "transparent";
+}
+
+window.addEventListener("scroll", changeOpacity);
+changeOpacity(); // estado inicial
