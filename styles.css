@@ -56,6 +56,12 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* habia scroll horizontal al reducir la pantalla, esto lo evita  */
+body {
+    overflow-x: hidden;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -451,21 +457,22 @@ header {
     .img-noblur {
         flex-direction: column-reverse;
         align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem 1.25rem;
+        gap: 3rem; 
+        padding: 2.5rem 1.25rem 3rem;
         text-align: center;
+        justify-content: center;
     }
 
     .img-overlay {
-        width: min(90vw, calc(50vh * var(--shape-ratio)));
-        max-height: 50vh;
+        width: min(80vw, calc(45vh * var(--shape-ratio)));
+        max-height: 45vh;
         height: auto;
     }
 
     .overlay-text {
         width: auto;
         max-width: 90vw;
-        padding: 1.5rem 1.25rem;
+        padding: 1.75rem 1.25rem 2rem;
         text-align: center;
     }
 }
@@ -774,6 +781,36 @@ header {
     font-size: var(--font-size);
 }
 
+@media (max-width: 900px) {
+    .turismo {
+        padding: 2rem 1.25rem;
+    }
+
+    .turismo-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        min-height: auto;
+    }
+
+    .turismo-text {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .turismo-img {
+        max-width: 100%;
+        min-height: auto;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+
+    .turismo-img .slide-mask,
+    .turismo-img .slide-group,
+    .turismo-img .slide {
+        height: 100%;
+    }
+}
+
 
 
 
@@ -862,9 +899,20 @@ header {
     color: var(--color-resaltados);
 }
 
+@media screen and (max-width: 1100px) {
+    .temporadas-grid {
+        grid-template-columns: repeat(2, minmax(230px, 1fr));
+        justify-items: center;
+    }
+}
+
 @media screen and (max-width: 720px) {
     .temporadas {
         padding: 2rem 1.25rem;
+    }
+
+    .temporadas-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -911,13 +959,15 @@ header {
 }
 
 .naturaleza-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    flex-wrap: wrap;
 }
 
 .stat {
     text-align: center;
+    flex: 1 1 120px;
 }
 
 .stat-value {
