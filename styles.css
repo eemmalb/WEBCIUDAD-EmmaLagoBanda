@@ -106,7 +106,7 @@ video {
 }
 
 #menu > .opciones-menu > ul {
-    width: 30em;
+    width: 22em;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -772,7 +772,7 @@ header {
 /* SECCIÓN TEMPORADAS */
 .temporadas {
     background: var(--color-terciario);
-    padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 6vw, 4.5rem);
+    padding: clamp(1rem, 2.5vw, 2rem) clamp(1.5rem, 5vw, 3.5rem);
     display: grid;
     gap: 2rem;
 }
@@ -861,12 +861,115 @@ header {
 
 
 .curiosidades {
-    min-height: 100vh;
+    min-height: auto;
     background-color: var(--color-terciario);
     z-index: 3;
+    padding-top: 0;
+    padding: clamp(1rem, 3vw, 2.25rem) clamp(1.5rem, 5vw, 3.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(4.5rem, 15vw, 30rem);
+    align-items: center;
+    justify-content: center;
 }
 
 .chart {
-    width: 400px;
-    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.curiosidades .naturaleza {
+    max-width: 520px;
+    width: min(50vw, 520px);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--color-primario);
+}
+
+.naturaleza h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.naturaleza-desc {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.4;
+}
+
+.naturaleza-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 600;
+}
+
+.stat-label {
+    margin-top: 0.35rem;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .curiosidades {
+        flex-direction: column;
+    }
+    
+    .chart,
+    .curiosidades .naturaleza {
+        width: 100%;
+        max-width: 700px;
+    }
+    .naturaleza-stats {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+.footer {
+    background: var(--color-terciario);
+    padding: 2rem 1.5rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    text-transform: lowercase;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.footer-info {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    display: grid;
+    gap: 0.2rem;
 }

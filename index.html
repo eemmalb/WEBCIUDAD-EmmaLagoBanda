@@ -39,10 +39,7 @@
                                 <a href="#turismo" onclick="closeMenu()">turismo</a>
                             </li>
                             <li>
-                                <a href="#localizaciones" onclick="closeMenu()">localizaciones</a>
-                            </li>
-                            <li>
-                                <a href="#contacto" onclick="closeMenu()">contacto</a>
+                                <a href="#temporadas" onclick="closeMenu()">información</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
@@ -312,10 +309,10 @@
                 </div>
             </section>
 
-            <section class="temporadas">
+            <section class="temporadas" id="temporadas">
                 <div class="temporadas-header">
                     <p class="title-montserrat">Datos de Reykjavik</p>
-                    <h3 class="title-temporadas">Guía de temporadas</h3>
+                    <!-- <h3 class="title-temporadas">Guía de temporadas</h3> -->
                     <p class="temporadas-desc">Cada estación en Reikiavik ofrece una experiencia única. Desde el sol de medianoche hasta las auroras boreales, elige el momento perfecto para tu aventura.</p>
                 </div>
                 <div class="temporadas-grid">
@@ -377,7 +374,41 @@
                         <canvas id="tarta"></canvas>
                     </div>
                 </div>
+
+                <div class="naturaleza">
+                    <h3 class="title-montserrat">La naturaleza como refugio</h3>
+                    <p class="naturaleza-desc">En Reikiavik, la frontera entre ciudad y naturaleza se disuelve. Aquí, el paisaje ártico es parte de la vida cotidiana.</p>
+                    <div class="naturaleza-stats">
+                        <div class="stat">
+                            <div class="stat-value">274</div>
+                            <div class="stat-label">DÍAS DE LUZ</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">0ºC</div>
+                            <div class="stat-label">TEMPERATURA MEDIA</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">64ºN</div>
+                            <div class="stat-label">LATITUD NORTE</div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+            <footer class="footer">
+                <div class="footer-logo">
+                    <img src="media/img/ReykjavikLogo.webp" alt="Reykjavik logo">
+                </div>
+                <nav class="footer-nav">
+                    <a href="#explorar">explorar</a>
+                    <a href="#turismo">turismo</a>
+                    <a href="#temporadas">información</a>
+                </nav>
+                <div class="footer-info">
+                    <p>© 2024 Reykjavík. Todos los derechos reservados.</p>
+                    <p>Inspirado en la cultura nórdica y la naturaleza islandesa.</p>
+                </div>
+            </footer>
 
         </body>
     </html>
