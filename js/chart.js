@@ -3,10 +3,10 @@
  */
 function cargaGraficoTarta() {
     var datos = {
-        labels: ["323.000", "800.000"],
+        labels: ["Ovejas", "Humanos"],
         datasets: [{
             label: "Islandia",
-            backgroundColor: ["#D81E5B", "#F76C9A", "#F52268", "#C21B53"],
+            backgroundColor: ["rgba(83, 180, 210, 0.5)", "#12111b"],
             data: [800.000, 323.000]
         }]
     };
@@ -18,7 +18,17 @@ function cargaGraficoTarta() {
             plugins: {
                 title: {
                     display: true,
-                    text: "Las ovejas forman parte esencial del paisaje islandés: por cada persona, más de dos ovejas."
+                    text: "Las ovejas forman parte esencial del paisaje islandés: por cada persona, hay más de dos ovejas.",
+                    color: "#ffffff",
+                    font: {
+                        family: "Mulish, sans-serif",
+                        size: 14,
+                    },
+                    padding: {
+                        top: 12,
+                        bottom: 16
+                    },
+                    align: "center"
                 }
             }
         }
