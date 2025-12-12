@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <title>REYKJAVIK</title>
+            <meta charset="utf-8">
+            
+            <!-- CARGAMOS ARCHIVO EXTERNO DE CSS -->
+            <link href="styles.css" rel="stylesheet" type="text/css">
+            <link href="media/img/favicon-16x16.png" rel="icon" type="image/png">
+            <!--ICONOS DE FONT AWESOME-->
+            <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+            
+            <!-- CARGAMOS ARCHIVO EXTERNO DE JS -->
+            <script src="js/jquery-3.7.1.min.js"></script>
+            <script src="js/jquery-3.6.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="js/script.js"></script>
+            <script src="js/chart.js"></script>
+
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+
+        <body class="viajehtml">
+            <section class="introOrganizaViaje">
+                <nav id="menu">
+                    <h1>
+                        <a href="#"><span class="logo"><img src="media/img/ReykjavikLogo.webp" alt=""></span></a>
+                    </h1>
+                    <div class="opciones-menu">
+
+                        <i class="fas fa-bars" onclick="openMenu()"></i>
+                        <ul>
+                            <li>
+                                <a href="index.html" onclick="closeMenu()">explorar</a>
+                            </li>
+                            <li>
+                                <a href="index.html" onclick="closeMenu()">turismo</a>
+                            </li>
+                            <li>
+                                <a href="index.html"  onclick="closeMenu()">información</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <button> 
+                        <a href="viaje.html" onclick="closeMenu()">Planifica tu viaje</a> 
+                    </button>
+                </nav>
+                
+                <div class="AsistenteVirtual">
+                  <figure>
+                      <img src="media/img/IconoAsistenteVirtual.webp" alt="">
+                      <figcaption></figcaption>
+                  </figure>
+                </div>
+
+                <div class="tour-overlay"></div> <!-- silueta islandia con css para poder ponerla con el blur -->
+                <figure class="RecorridoTour">
+                    <img src="media/img/RecorridoTour.webp" alt="">
+                </figure>
+            </section>
+        </body>
+    </html>
