@@ -858,78 +858,15 @@ header {
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .temporadas-grid {
-        grid-template-columns: repeat(2, minmax(230px, 1fr));
-    }
+
+
+.curiosidades {
+    min-height: 100vh;
+    background-color: var(--color-terciario);
+    z-index: 3;
 }
 
-@media screen and (max-width: 720px) {
-    .temporadas-grid {
-        grid-template-columns: 1fr;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .turismo-container {
-        flex-direction: column;
-        gap: 1.5rem;
-        min-height: auto;
-        align-items: stretch;
-    }
-    .turismo-text,
-    .turismo-img {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .turismo-text {
-        padding: 1.5rem 1rem 0;
-        justify-content: center;
-    }
-    .turismo-img {
-        min-height: 50vh;
-        max-height: 70vh;
-        aspect-ratio: 4 / 5;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .turismo {
-        padding: 2.5rem 1.5rem;
-    }
-    .turismo-img {
-        aspect-ratio: 16 / 10;
-    }
-    .turismo-img img {
-        object-position: center;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .turismo {
-        padding: 2rem 1rem;
-    }
-    
-    .turismo-container {
-        gap: 1rem;
-    }
-
-    .turismo-text {
-        padding: 1rem 0 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .turismo-highlights {
-        gap: 1rem;
-    }
-
-    .highlight {
-        grid-template-columns: 4px 1fr;
-    }
-
-    .turismo-img {
-        min-height: 45vh;
-        max-height: 60vh;
-        aspect-ratio: 4 / 5;
-    }
+.chart {
+    width: 400px;
+    margin: 0 auto;
 }
